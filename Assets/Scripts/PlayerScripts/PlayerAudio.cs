@@ -24,6 +24,11 @@ public class PlayerAudio : MonoBehaviour
         classAudioSource.PlayOneShot(sound, volume);
     }
 
+    public static void PlaySound(AudioClip[] sounds, float volume)
+    {
+        classAudioSource.PlayOneShot(sounds[Random.Range(0, sounds.Length)], volume);
+    }
+
     public void JumpSound()
     {
         audioSource.PlayOneShot(jumpSound, 1.0f);

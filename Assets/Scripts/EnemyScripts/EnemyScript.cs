@@ -15,8 +15,8 @@ public class EnemyScript : MonoBehaviour
     public Collider2D triggerCollider;
     public float moveSpeed = 50.0f;
     public bool enemyCanMove = true;
+    public int maxHealth;
 
-    [SerializeField] private int maxHealth;
     [SerializeField] private bool isInvulnerable = false;
     [SerializeField] private AudioClip enemyHitSound, enemyDeathSound;
     [SerializeField] GameObject player, enemyDeathFire, smallHeart;
@@ -52,7 +52,7 @@ public class EnemyScript : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            PlayerAudio.PlaySound(enemyDeathSound, 1.0f);
+            PlayerAudio.PlaySound(enemyDeathSound, 1.5f);
             Instantiate(enemyDeathFire, transform.position, Quaternion.identity);
 
             if (player.GetComponent<PlayerHealth>().GetCurrentHealth() < player.GetComponent<PlayerHealth>().GetMaxHealth())
