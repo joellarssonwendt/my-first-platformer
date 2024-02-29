@@ -10,6 +10,7 @@ Pillars and Fountain by uftsimge https://uftsimge.itch.io/
 Things by SnoopethDuckDuck https://snoopethduckduck.itch.io/
 1-Bit Ruins Tileset by Omniclause https://omniclause.itch.io/
 Free Pixel Art Weapons by Superdark https://superdark.itch.io/
+Mountain Dusk Parallax background by ansimuz https://ansimuz.itch.io/
 
 Audio
 Fantasy Sound Effects by Little Robot Sound Factory https://opengameart.org/content/fantasy-sound-effects-library
