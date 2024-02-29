@@ -24,7 +24,6 @@ public class SpikesBehaviour : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             GameObject player = other.gameObject;
-            if (player.GetComponent<PlayerController>().iFrames) return;
             player.GetComponent<PlayerHealth>().TakeDamage(damage);
             player.GetComponent<PlayerController>().GetKnockedBack(transform, knockBack);
         }

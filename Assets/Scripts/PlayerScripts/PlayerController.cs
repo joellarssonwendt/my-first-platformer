@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     public bool isAirborne = false;
 
     [SerializeField] private Transform leftFoot, rightFoot;
-    [SerializeField] private LayerMask groundLayer, enemyLayer, redLayer, greenLayer, blueLayer;
+    [SerializeField] private LayerMask groundLayer, enemyLayer, hazardLayer, redLayer, greenLayer, blueLayer;
     [SerializeField] private GameObject attackPoint;
 
     private int attackPower = 10;
@@ -255,6 +255,7 @@ public class PlayerController : MonoBehaviour
     private void HitReg()
     {
         Collider2D[] attackArea = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRadius, enemyLayer);
+        Collider2D[] breakArea = Physics2D.OverlapCircleAll(attackPoint.transform.position, attackRadius, hazardLayer);
 
         for (int i = 0; i < attackArea.Length; i++)
         {
@@ -265,10 +266,14 @@ public class PlayerController : MonoBehaviour
                     attackArea[i].gameObject.GetComponent<EnemyScript>().TakeDamage(attackPower);
                 }
             }
+        }
 
-            if (attackArea[i].gameObject.CompareTag("Destructible"))
+        for (int i = 0; i < breakArea.Length; i++)
+        {
+
+            if (breakArea[i].gameObject.CompareTag("Destructible"))
             {
-                attackArea[i].gameObject.GetComponent<DestructibleScript>().TakeDamage(attackPower);
+                breakArea[i].gameObject.GetComponent<DestructibleScript>().TakeDamage(attackPower);
             }
         }
     }
