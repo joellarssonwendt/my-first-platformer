@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.SceneManagement;
 
 public class PlayerPickup : MonoBehaviour
 {
+    // Constants 
+    const float defaultAlpha = 0.15f;
+
     // Variables
     public bool isRed, isBlue, isGreen;
 
@@ -19,9 +23,9 @@ public class PlayerPickup : MonoBehaviour
     // Methods
     private void Start()
     {
-        ChangeAlpha(redTilemap, 0.1f);
-        ChangeAlpha(greenTilemap, 0.1f);
-        ChangeAlpha(blueTilemap, 0.1f);
+        ChangeAlpha(redTilemap, defaultAlpha);
+        ChangeAlpha(greenTilemap, defaultAlpha);
+        ChangeAlpha(blueTilemap, defaultAlpha);
     }
 
     // Item Pickup trigger
@@ -118,9 +122,9 @@ public class PlayerPickup : MonoBehaviour
         Physics2D.IgnoreLayerCollision(3, 10);
         Physics2D.IgnoreLayerCollision(3, 11);
 
-        ChangeAlpha(redTilemap, 0.1f);
-        ChangeAlpha(greenTilemap, 0.1f);
-        ChangeAlpha(blueTilemap, 0.1f);
+        ChangeAlpha(redTilemap, defaultAlpha);
+        ChangeAlpha(greenTilemap, defaultAlpha);
+        ChangeAlpha(blueTilemap, defaultAlpha);
 
         if (isRed)
         {
