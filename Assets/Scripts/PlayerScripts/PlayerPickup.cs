@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerPickup : MonoBehaviour
 {
     // Constants 
-    const float defaultAlpha = 0.15f;
+    const float defaultAlpha = 0.1f;
 
     // Variables
     public bool isRed, isBlue, isGreen;
