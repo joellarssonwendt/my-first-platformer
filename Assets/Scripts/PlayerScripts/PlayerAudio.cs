@@ -10,7 +10,7 @@ public class PlayerAudio : MonoBehaviour
 
     // Variables
     [SerializeField] private AudioClip[] pickUpSounds, footStepSounds, swordSwingSounds;
-    [SerializeField] private AudioClip jumpSound, dodgeSound, hurtSound, smallHeartSound, transformSound, transformExitSound, unlockSound, swordItemSound, winSound;
+    [SerializeField] private AudioClip jumpSound, dodgeSound, hurtSound, smallHeartSound, transformSound, transformExitSound, unlockSound, swordItemSound, winSound, keyGetSound;
 
     // Methods
     void Start()
@@ -62,6 +62,11 @@ public class PlayerAudio : MonoBehaviour
     public void TransformExitSound()
     {
         audioSource.PlayOneShot(transformExitSound, 2.0f);
+    }
+
+    public void KeyGetSound()
+    {
+        audioSource.PlayOneShot(keyGetSound, 1.0f);
     }
 
     public void UnlockSound()

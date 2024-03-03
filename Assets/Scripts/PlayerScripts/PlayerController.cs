@@ -278,6 +278,31 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void StopDodgeRoll()
+    {
+        StopCoroutine(DodgeRoll());
+        iFrames = false;
+        Physics2D.IgnoreLayerCollision(3, 7, false);
+        isDodgeRolling = false;
+        rb2d.velocity = new Vector2(0, rb2d.velocity.y);
+        canMove = true;
+        canDodgeRoll = false;
+        anim.Play("Player_Idle");
+    }
+
+    public void GiveIFrames(float duration)
+    {
+        iFrames = true;
+        Physics2D.IgnoreLayerCollision(3, 7, true);
+        Invoke("StopIFrames", duration);
+    }
+
+    private void StopIFrames()
+    {
+        iFrames = false;
+        Physics2D.IgnoreLayerCollision(3, 7, false);
+    }
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

@@ -30,7 +30,9 @@ public class WinCondition : MonoBehaviour
 
     public void UnlockDoor()
     {
+        player.GetComponent<PlayerController>().StopDodgeRoll();
         player.GetComponent<PlayerController>().canMove = false;
+        player.GetComponent<PlayerController>().GiveIFrames(2.0f);
         player.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         player.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         player.GetComponent<Animator>().Play("Player_Idle");

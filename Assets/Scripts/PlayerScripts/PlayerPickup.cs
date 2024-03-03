@@ -49,6 +49,7 @@ public class PlayerPickup : MonoBehaviour
             hasKey = true;
 
             GetComponent<PlayerAudio>().PickUpSounds();
+            GetComponent<PlayerAudio>().KeyGetSound();
             StartCoroutine(DestroyObject(other.gameObject));
         }
 

@@ -59835,7 +59835,8 @@ MonoBehaviour:
   transformExitSound: {fileID: 8300000, guid: 0d43ac5483417f043acf3e2f53fb4796, type: 3}
   unlockSound: {fileID: 8300000, guid: 4eec4d7d573bd3b4d8c71db9147e2f8c, type: 3}
   swordItemSound: {fileID: 8300000, guid: 0710d274499ab8d45abef2bfa2ed409b, type: 3}
-  winSound: {fileID: 8300000, guid: 1308d1fdf1654bd40bfe6099256fc692, type: 3}
+  winSound: {fileID: 8300000, guid: 99adfc9b2cd7f854c90f47e006a5e74f, type: 3}
+  keyGetSound: {fileID: 8300000, guid: 7ef0d0f4056472d4cbfd0d386a064619, type: 3}
 --- !u!114 &1790730857
 MonoBehaviour:
   m_ObjectHideFlags: 0
