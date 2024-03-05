@@ -122,6 +122,9 @@ public class PlayerPickup : MonoBehaviour
         Physics2D.IgnoreLayerCollision(3, 9);
         Physics2D.IgnoreLayerCollision(3, 10);
         Physics2D.IgnoreLayerCollision(3, 11);
+        Physics2D.IgnoreLayerCollision(7, 9);
+        Physics2D.IgnoreLayerCollision(7, 10);
+        Physics2D.IgnoreLayerCollision(7, 11);
 
         ChangeAlpha(redTilemap, defaultAlpha);
         ChangeAlpha(greenTilemap, defaultAlpha);
@@ -130,18 +133,21 @@ public class PlayerPickup : MonoBehaviour
         if (isRed)
         {
             Physics2D.IgnoreLayerCollision(3, 9, false);
+            Physics2D.IgnoreLayerCollision(7, 9, false);
             ChangeAlpha(redTilemap, 1.0f);
         }
 
         if (isGreen)
         {
             Physics2D.IgnoreLayerCollision(3, 10, false);
+            Physics2D.IgnoreLayerCollision(7, 10, false);
             ChangeAlpha(greenTilemap, 1.0f);
         }
 
         if (isBlue)
         {
             Physics2D.IgnoreLayerCollision(3, 11, false);
+            Physics2D.IgnoreLayerCollision(7, 11, false);
             ChangeAlpha(blueTilemap, 1.0f);
         }
 
