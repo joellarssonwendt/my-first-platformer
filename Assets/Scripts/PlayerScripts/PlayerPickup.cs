@@ -26,6 +26,7 @@ public class PlayerPickup : MonoBehaviour
         ChangeAlpha(redTilemap, defaultAlpha);
         ChangeAlpha(greenTilemap, defaultAlpha);
         ChangeAlpha(blueTilemap, defaultAlpha);
+        UpdateColorInteractions();
     }
 
     // Item Pickup trigger
