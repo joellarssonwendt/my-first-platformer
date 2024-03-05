@@ -12,8 +12,8 @@ public class DestructibleScript : MonoBehaviour
     // Variables
     [SerializeField] private ParticleSystem parts1, parts2, parts3, parts4;
     [SerializeField] private AudioClip hitSound, deathSound;
+    [SerializeField] private int health = 10;
 
-    private int health = 30;
     private Color originalColor;
 
     private void Start()
